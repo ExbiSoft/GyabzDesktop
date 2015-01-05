@@ -1,6 +1,4 @@
-GyabzSS
+Gyabz Screenshots
 =======
 
-Screenshotting software for Gyabz
-
-by Benji
+Work in progress by Benji
