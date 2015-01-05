@@ -1,1 +1,9 @@
 y:\users\ben\documents\visual studio 2013\Projects\GyabzSS\GyabzSS\bin\Debug\GyabzSS.exe.config
+Y:\Users\Ben\Documents\Visual Studio 2013\Projects\GyabzSS\GyabzSS\bin\Debug\GyabzSS.exe
+Y:\Users\Ben\Documents\Visual Studio 2013\Projects\GyabzSS\GyabzSS\bin\Debug\GyabzSS.pdb
+Y:\Users\Ben\Documents\Visual Studio 2013\Projects\GyabzSS\GyabzSS\obj\Debug\GyabzSS.csprojResolveAssemblyReference.cache
+Y:\Users\Ben\Documents\Visual Studio 2013\Projects\GyabzSS\GyabzSS\obj\Debug\GyabzSS.Form1.resources
+Y:\Users\Ben\Documents\Visual Studio 2013\Projects\GyabzSS\GyabzSS\obj\Debug\GyabzSS.Properties.Resources.resources
+Y:\Users\Ben\Documents\Visual Studio 2013\Projects\GyabzSS\GyabzSS\obj\Debug\GyabzSS.csproj.GenerateResource.Cache
+Y:\Users\Ben\Documents\Visual Studio 2013\Projects\GyabzSS\GyabzSS\obj\Debug\GyabzSS.exe
+Y:\Users\Ben\Documents\Visual Studio 2013\Projects\GyabzSS\GyabzSS\obj\Debug\GyabzSS.pdb
