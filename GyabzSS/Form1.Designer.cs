@@ -54,6 +54,12 @@
             this.btnAreaCap.Text = "Capture Area";
             this.btnAreaCap.UseVisualStyleBackColor = true;
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "png";
+            this.saveFileDialog1.FileName = "screencap";
+            this.saveFileDialog1.Filter = "PNG|*.png";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
