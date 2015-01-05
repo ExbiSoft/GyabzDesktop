@@ -3,3 +3,11 @@
 3. Autosave file with a random-generated id
 
 Example: fsdJDF345Nd9fs8n3.png
+
+
+
+Endpoint soon
+
+POST http://gya.bz/api/shot
+
+user=[username]&key=[sessionkey]&data=[base64(image)]
