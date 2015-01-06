@@ -79,5 +79,10 @@ namespace GyabzSS
             ID = sb.ToString();
             return ID;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
