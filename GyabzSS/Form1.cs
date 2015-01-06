@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Drawing.Imaging;
+using System.IO;
 
 namespace GyabzSS
 {
@@ -18,6 +19,7 @@ namespace GyabzSS
         Graphics g;
         Graphics screenCap;
         string saveTo;
+        string tempPath;
 
         public Form1()
         {
@@ -26,18 +28,56 @@ namespace GyabzSS
 
         private void btnScreenCap_Click(object sender, EventArgs e)
         {
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            this.Hide();
+            Thread.Sleep(500); //hides screenshot box to get capture of screen
+            g = this.CreateGraphics();
+            bmp = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height, g); 
+            screenCap = Graphics.FromImage(bmp);
+            tempPath = Path.GetTempPath(); //creates a temporary path to store screenshot
+            saveTo = tempPath + IDgen() + ".png";
+            screenCap.CopyFromScreen(Screen.PrimaryScreen.Bounds.X, Screen.PrimaryScreen.Bounds.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size); //captures current screen
+            bmp.Save(saveTo);
+            this.Show(); 
+        }
+
+        private void btnAreaCap_Click(object sender, EventArgs e)
+        {
+            //draw region for saving
+        }
+
+        private string IDgen()
+        {
+            //a function that returns a random filename
+            //generated from ascii values
+            string ID = "";
+            char nextChar = ' ';
+            int charType;
+
+            Random rand = new Random();
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < 16; i++)
             {
-                this.Hide();
-                Thread.Sleep(500); //hides screenshot box to get capture of screen
-                g = this.CreateGraphics(); //creates instance for image graphics
-                bmp = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height, g); //sets bitmap to size of screen
-                screenCap = Graphics.FromImage(bmp); //creates new graphics for image
-                saveTo = saveFileDialog1.FileName; //stores save location for screenshot
-                screenCap.CopyFromScreen(Screen.PrimaryScreen.Bounds.X, Screen.PrimaryScreen.Bounds.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size); //captures current screen
-                bmp.Save(saveTo); //saves screenshot
-                this.Show(); //shows screenshot box again
+                charType = rand.Next(1, 4);
+                switch(charType)
+                {
+                    case 1:
+                        nextChar = (char)rand.Next(48, 57);
+                        break;
+                    case 2:
+                        nextChar = (char)rand.Next(65, 90);
+                        break;
+                    case 3:
+                        nextChar = (char)rand.Next(97, 122);
+                        break;
+                    default:
+                        MessageBox.Show("An error has occurred");
+                        break;
+                }
+                sb.Insert(i, nextChar);
             }
+            ID = sb.ToString();
+            return ID;
         }
     }
 }

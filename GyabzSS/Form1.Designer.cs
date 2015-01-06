@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnScreenCap = new System.Windows.Forms.Button();
             this.btnAreaCap = new System.Windows.Forms.Button();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // btnScreenCap
@@ -53,12 +52,7 @@
             this.btnAreaCap.TabIndex = 1;
             this.btnAreaCap.Text = "Capture Area";
             this.btnAreaCap.UseVisualStyleBackColor = true;
-            // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.DefaultExt = "png";
-            this.saveFileDialog1.FileName = "screencap";
-            this.saveFileDialog1.Filter = "PNG|*.png";
+            this.btnAreaCap.Click += new System.EventHandler(this.btnAreaCap_Click);
             // 
             // Form1
             // 
@@ -82,7 +76,6 @@
 
         private System.Windows.Forms.Button btnScreenCap;
         private System.Windows.Forms.Button btnAreaCap;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
