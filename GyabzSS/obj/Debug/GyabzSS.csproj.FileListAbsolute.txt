@@ -7,3 +7,4 @@ Y:\Users\Ben\Documents\Visual Studio 2013\Projects\GyabzSS\GyabzSS\obj\Debug\Gya
 Y:\Users\Ben\Documents\Visual Studio 2013\Projects\GyabzSS\GyabzSS\obj\Debug\GyabzSS.csproj.GenerateResource.Cache
 Y:\Users\Ben\Documents\Visual Studio 2013\Projects\GyabzSS\GyabzSS\obj\Debug\GyabzSS.exe
 Y:\Users\Ben\Documents\Visual Studio 2013\Projects\GyabzSS\GyabzSS\obj\Debug\GyabzSS.pdb
+y:\Users\Ben\documents\visual studio 2013\Projects\GyabzSS\GyabzSS\obj\Debug\GyabzSS.Form2.resources

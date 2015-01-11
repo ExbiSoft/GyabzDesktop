@@ -45,7 +45,6 @@
             // 
             // btnAreaCap
             // 
-            this.btnAreaCap.Enabled = false;
             this.btnAreaCap.Location = new System.Drawing.Point(12, 66);
             this.btnAreaCap.Name = "btnAreaCap";
             this.btnAreaCap.Size = new System.Drawing.Size(210, 58);
@@ -69,7 +68,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GyabzSS";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

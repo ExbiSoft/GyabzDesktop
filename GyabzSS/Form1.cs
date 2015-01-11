@@ -15,11 +15,12 @@ namespace GyabzSS
 {
     public partial class Form1 : Form
     {
-        Bitmap bmp;
-        Graphics g;
-        Graphics screenCap;
-        string saveTo;
-        string tempPath;
+        private Bitmap bmp;
+        private Graphics g;
+        private Graphics screenCap;
+        private string saveTo;
+        private string tempPath;
+        Form2 regionDraw = new Form2();
 
         public Form1()
         {
@@ -42,7 +43,10 @@ namespace GyabzSS
 
         private void btnAreaCap_Click(object sender, EventArgs e)
         {
-            //draw region for saving
+            this.Hide();
+            regionDraw.Show();
+            regionDraw.activate();
+            Application.Exit();
         }
 
         private string IDgen()
@@ -78,11 +82,6 @@ namespace GyabzSS
             }
             ID = sb.ToString();
             return ID;
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
