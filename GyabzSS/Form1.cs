@@ -46,7 +46,6 @@ namespace GyabzSS
             this.Hide();
             regionDraw.Show();
             regionDraw.activate();
-            Application.Exit();
         }
 
         private string IDgen()
