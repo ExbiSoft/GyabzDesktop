@@ -29,16 +29,7 @@ namespace GyabzSS
 
         private void btnScreenCap_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Thread.Sleep(500); //hides screenshot box to get capture of screen
-            g = this.CreateGraphics();
-            bmp = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height, g); 
-            screenCap = Graphics.FromImage(bmp);
-            tempPath = Path.GetTempPath(); //creates a temporary path to store screenshot
-            saveTo = tempPath + IDgen() + ".png";
-            screenCap.CopyFromScreen(Screen.PrimaryScreen.Bounds.X, Screen.PrimaryScreen.Bounds.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size); //captures current screen
-            bmp.Save(saveTo);
-            this.Show(); 
+            captureScreen();
         }
 
         private void btnAreaCap_Click(object sender, EventArgs e)
@@ -46,6 +37,20 @@ namespace GyabzSS
             this.Hide();
             regionDraw.Show();
             regionDraw.activate();
+        }
+
+        private void captureScreen()
+        {
+            this.Hide();
+            Thread.Sleep(500); //hides screenshot box to get capture of screen
+            g = this.CreateGraphics();
+            bmp = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height, g);
+            screenCap = Graphics.FromImage(bmp);
+            tempPath = Path.GetTempPath(); //creates a temporary path to store screenshot
+            saveTo = tempPath + IDgen() + ".png";
+            screenCap.CopyFromScreen(Screen.PrimaryScreen.Bounds.X, Screen.PrimaryScreen.Bounds.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size); //captures current screen
+            bmp.Save(saveTo);
+            this.Show();
         }
 
         private string IDgen()
@@ -81,6 +86,28 @@ namespace GyabzSS
             }
             ID = sb.ToString();
             return ID;
+        }
+
+        private void captureScreenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            captureScreen();
+        }
+
+        private void captureRegionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            regionDraw.Show();
+            regionDraw.activate();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        public void showMain()
+        {
+            this.Show();
         }
     }
 }

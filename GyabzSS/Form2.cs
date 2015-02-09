@@ -25,7 +25,6 @@ namespace GyabzSS
         private Graphics screenCap;
         private string saveTo;
         private string tempPath;
-        //Form1 mainForm = new Form1();
 
         public Form2()
         {
@@ -90,6 +89,9 @@ namespace GyabzSS
             saveTo = tempPath + IDgen() + ".png";
             screenCap.CopyFromScreen(Math.Min(startX, endX), Math.Min(startY, endY), 0, 0, size); //captures current screen
             bmp.Save(saveTo);
+
+            this.Close();
+            new Form1().Show();
         }
 
         private string IDgen()
